@@ -1,0 +1,28 @@
+.button {
+	@include default-position;
+	margin-left: 2rem;
+	font-family: "Montserrat", sans-serif;
+	display: inline-block;
+	color: $color-text;
+	background-color: $color-secondary;
+	text-decoration: none;
+	padding: 2rem;
+	border-radius: 10rem;
+	font-size: 2rem;
+	transition: all 0.2s;
+	animation-name: moveInBottom;
+	animation-delay: 1s;
+	animation-duration: 0.7s;
+	animation-fill-mode: backwards;
+
+	&:hover {
+		background-color: $color-tertiary;
+		box-shadow: 0 2rem 2rem rgba($color-tertiary, 0.4);
+		transform: translateY(-0.5rem);
+	}
+
+	&:active {
+		box-shadow: 0 1rem 1rem rgba($color-tertiary, 0.5);
+		transform: translateY(0);
+	}
+}

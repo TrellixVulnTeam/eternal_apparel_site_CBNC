@@ -1,0 +1,26 @@
+.footer {
+	padding: 2rem;
+	font-size: 3rem;
+	color: $color-tertiary;
+
+	&__icons {
+		display: flex;
+		justify-content: center;
+		cursor: pointer;
+
+		&--instagram,
+		&--facebook,
+		&--pinterest,
+		&--twitter {
+			transition: all 0.2s;
+			&:not(:last-child) {
+				padding-right: 2rem;
+			}
+
+			&:hover {
+				color: $color-secondary;
+				transform: translateY(-0.5rem) scale(1.2);
+			}
+		}
+	}
+}

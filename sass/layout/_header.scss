@@ -1,0 +1,83 @@
+.header {
+	background-image: linear-gradient(
+			to right,
+			rgba(0, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.2)
+		),
+		url(../../img/header_img.jpg);
+	background-position: top;
+	background-size: cover;
+	height: 95vh;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+	&__section-1 {
+		width: 50%;
+		background-color: $color-primary;
+		color: $color-text;
+		height: 100%;
+	}
+
+	&__logo {
+		margin-top: 1rem;
+		font-size: 3rem;
+		font-family: "Dancing Script", cursive;
+		animation-name: moveInLeft;
+		animation-duration: 0.7s;
+	}
+
+	&__navbar {
+		display: flex;
+		justify-content: space-between;
+		font-family: "Montserrat", sans-serif;
+		font-size: 1.6rem;
+		font-weight: 700;
+		padding-left: 2rem;
+
+		&-item {
+			@include default-position;
+			cursor: pointer;
+			display: inline-block;
+			padding-right: 3rem;
+			transition: all 0.2s;
+			animation-name: moveInBottom;
+			animation-duration: 0.7s;
+
+			&:hover {
+				transform: translateY(-0.5rem);
+			}
+
+			&:active {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	&__info-section {
+		font-family: "Montserrat", sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&-heading {
+			text-align: center;
+			margin-top: 10rem;
+			font-size: 8rem;
+			display: inline-block;
+			color: $color-secondary;
+			animation-name: moveInRight;
+			animation-duration: 0.7s;
+			animation-delay: 0.5s;
+			animation-fill-mode: backwards;
+		}
+		&-paragraph {
+			margin-top: 1rem;
+			display: inline-block;
+			width: 70%;
+			font-size: 2rem;
+			line-height: 3rem;
+			animation-name: moveInLeft;
+			animation-delay: 0.8s;
+			animation-duration: 0.7s;
+			animation-fill-mode: backwards;
+		}
+	}
+}
